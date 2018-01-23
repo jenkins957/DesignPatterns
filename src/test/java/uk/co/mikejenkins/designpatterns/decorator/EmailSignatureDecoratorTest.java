@@ -1,9 +1,5 @@
 /*
- * File: EmailSignatureDecoratorTest
- * User: michaeljenkins 
- * Date: Apr 17, 2015
- *
- * Copyright Mike Jenkins 2014
+ * Copyright 2018 http://www.beyondcoding.net
  */
 package uk.co.mikejenkins.designpatterns.decorator;
 
@@ -17,13 +13,13 @@ public class EmailSignatureDecoratorTest
     {
         Email email = new BasicEmail( "A test email" );
         assertEquals( "A test email", email.getContents() );
-        
-        EmailSignatureDecorator emailWithSignature = 
+
+        EmailSignatureDecorator emailWithSignature =
                 new EmailSignatureDecorator( email );
 
         String expectedMsg = "A test email/n/nSave paper! Please do not "
                 + "print unless you really need to.";
-        
+
         assertEquals( expectedMsg, emailWithSignature.getContents() );
     }
 }

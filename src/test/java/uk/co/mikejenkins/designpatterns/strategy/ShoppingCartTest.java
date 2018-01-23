@@ -1,9 +1,5 @@
 /*
- * File: ShoppingCartTest
- * User: michaeljenkins 
- * Date: Apr 17, 2015
- *
- * Copyright Mike Jenkins 2014
+ * Copyright 2018 http://www.beyondcoding.net
  */
 package uk.co.mikejenkins.designpatterns.strategy;
 
@@ -41,19 +37,19 @@ public class ShoppingCartTest
     {
         VoucherPayment nullVoucherRef = new VoucherPayment(null );
         VoucherPayment emptyVoucherRef = new VoucherPayment("" );
-        
+
         assertNull( nullVoucherRef.getVoucherReference() );
         assertTrue( emptyVoucherRef.getVoucherReference().length() == 0 );
-        
+
         assertFalse( cart.processPayment( nullVoucherRef ) );
         assertFalse( cart.processPayment( emptyVoucherRef ) );
     }
-    
+
     @Test
     public void shouldStoreItemDetails()
     {
         Item item = new ShoppingCart.Item("item name", 12345L );
-        
+
         assertEquals( "item name", item.getItemDescription() );
         assertEquals( 12345L, item.getPriceInPence() );
     }
