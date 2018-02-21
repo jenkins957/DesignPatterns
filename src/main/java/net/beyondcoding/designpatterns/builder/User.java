@@ -11,31 +11,30 @@ import java.util.Objects;
  */
 public class User
 {
+    /**
+     *
+     */
+    private String firstName;
 
     /**
      *
      */
-    protected String firstName;
+    private String lastName;
 
     /**
      *
      */
-    protected String lastName;
+    private String phoneNumber;
 
     /**
      *
      */
-    protected String phoneNumber;
+    private String address;
 
     /**
      *
      */
-    protected String address;
-
-    /**
-     *
-     */
-    protected String dateOfBirth;
+    private String dateOfBirth;
 
     /**
      *

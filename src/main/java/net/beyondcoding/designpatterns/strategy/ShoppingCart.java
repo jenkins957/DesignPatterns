@@ -12,18 +12,13 @@ import java.util.List;
  */
 public final class ShoppingCart
 {
-    private List<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
 
     /**
-     *
-     * @param item
-     */
-    public void addItem( Item item )
-    {
-        items.add( item );
-    }
-
-    /**
+     * Note: Strategy Pattern.
+     * Any class that implements 'Payment' is supported,
+     * this compiles with the Open/Close Principle, as
+     * more payment types can be added without changing this class
      *
      * @param paymentType
      * @return
@@ -31,6 +26,15 @@ public final class ShoppingCart
     public boolean processPayment( final Payment paymentType )
     {
         return paymentType.processPayment();
+    }
+
+    /**
+     *
+     * @param item
+     */
+    public void addItem( final Item item )
+    {
+        items.add( item );
     }
 
     /**

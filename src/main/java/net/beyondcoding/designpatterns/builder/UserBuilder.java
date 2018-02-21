@@ -4,7 +4,9 @@
 package net.beyondcoding.designpatterns.builder;
 
 /**
- *
+ * Builder Pattern (External Builder). Easy way to create User object with
+ * only the parameters of interest.
+ * This Builder is a separate class, but could be inner class.
  * @author michaeljenkins
  */
 public class UserBuilder
@@ -36,9 +38,9 @@ public class UserBuilder
      * @param phoneNumber
      * @return
      */
-    public UserBuilder setAddress( final String phoneNumber )
+    public UserBuilder setAddress( final String address )
     {
-        this.address = phoneNumber;
+        this.address = address;
         return this;
     }
 
